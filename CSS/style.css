@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif; /* google fonts */
+    font-size: 18px;                   
+    margin: 0; /* remove margens padrões do navegador */
+}
+
+/* Classes de utilidade */
+.button {
+    padding: 15px;
+    background-color: #333;
+    color: #eee;
+    border: none;
+}
+
+.box {
+   width: 80%;
+   margin: auto; /* centraliza horizontalmente */
+}
+
+/* Container principal */
+.container {
+    background-color: #333;
+    color: #eee;
+    /* width: 960px ;  largura de toda página*/
+    width: 80%;      /* segue o tamanho página*/
+    /* margin: auto;     elemento no meio da página (fora do conteúdo) */
+    box-sizing: border-box;  /* Faz com que a largura e altura incluam o padding e a borda*/
+    margin-top: auto;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: auto;
+    /* mesma coisa que acima */
+    margin: auto;
+
+    /* padding-top: 60px ;
+       padding-left: 60px;
+       padding-right: 60px;
+       padding-bottom: 60px;  */
+    /* espaçamento no conteúdo (dentro do conteúdo) mesma coisa que acima */  
+    padding: 60px;
+
+    /* border: 15px solid rgb(0, 0, 255); 
+       RGB significa Red, Green, Blue (Vermelho, Verde, Azul)
+       Cada valor varia de 0 a 255
+       A combinação desses valores gera a cor desejada
+       Ex.: 
+         rgb(255, 0, 0) → vermelho puro
+         rgb(0, 255, 0) → verde puro
+         rgb(0, 0, 255) → azul puro
+         rgb(255, 255, 255) → branco
+         rgb(0, 0, 0) → preto/ */
+    border: 15px solid rgb(0, 0, 255); /* borda em volta */
+}
+
+/* Sidebar / Aside */
+.main-aside h2 {
+    text-align: center;
+}
+
+.main-aside h2:hover {  
+    color: green;
+    cursor: pointer; /* muda o cursor para a mãozinha ao passar por cima */
+}
+
+.main-aside ul {
+    list-style: none; /* remove bolinhas da lista */
+    text-align: center; 
+    padding: 0; 
+}
+
+.main-aside ul a {
+    text-decoration: none;
+    color: black; 
+}
+
+/* hover estiliza quando passa o mouse por cima */
+.main-aside ul a:hover {  
+    color: red;
+}
+
+/* estiliza os links ja visitados */
+.main-aside ul a:visited {
+    color: green;
+}
+
+/* Formulário */
+.main-form {
+    padding-left: 20px;
+    padding-bottom: 20px; /* igual ao primeiro código */
+}
+
+.main-form .form-group {
+    padding-bottom: 10px; /* igual ao primeiro código */
+}
+
+   /* Adiciona espaço interno dentro do input
+      - O texto não fica colado nas bordas */
+.main-form .form-group input {
+    padding: 10px;
+    width: 100%;
+}
+
+ /* display: block;
+    - Faz o elemento ocupar toda a largura da linha
+    - Elementos seguintes (como inputs) ficam na linha de baixo */
+.main-form .form-group label {
+    display: block;
+}
+
+/* Positions */
+/* Caixa que servirá de referência para elementos absolutos dentro dela */
+.box-relative {
+    position: relative; /* Define o ponto de referência para filhos com position: absolute */
+    border: 3px solid #333; /* Borda cinza escura ao redor da caixa */
+    height: 500px; /* Altura fixa da caixa */
+    border-radius: 7px; /* Cantos arredondados */
+}
+
+/* Elemento que ficará sempre na parte inferior da caixa */
+.box-relative .absolute {
+    position: absolute; /* Posição absoluta em relação ao .box-relative */
+    bottom: 0; /* Gruda na parte inferior do container */
+}
+
+/* Remove margens do título dentro do elemento absoluto */
+.box-relative .absolute h1 {
+    margin: 0; /* Garante que o h1 não tenha espaço extra */
+}
+
+/* Barra de navegação */
+#main-navbar {
+    background: #333;       
+    padding: 15px;          /* Espaçamento interno da barra */
+    text-align: center;     /* Centraliza o texto dentro da barra */
+    margin-bottom: 10px;    
+    position: sticky;       /* Faz a barra "grudar" no topo ao rolar a página */
+    top: 0;                 /* Distância do topo quando fixa */
+}
+
+/* Botão fixo */
+.fixed-button {
+    background: #333;      
+    color: #eee;            
+    border-radius: 50%;     /* Faz o botão circular */
+    width: 50px;           
+    height: 50px;           
+    position: fixed;        /* Fixa o botão na tela, independente do scroll */
+    bottom: 0;              /* Distância da parte inferior da tela */
+    right: 0;               /* Distância da lateral direita da tela */
+    margin: 20px;           /* Espaçamento em relação às bordas da tela */
+}
+
+/* Categories */
+.box-categories ul {
+   list-style: none; 
+}
+
+/* Seleciona o primeiro item da lista dentro de .box-categories e deixa a cor vermelha */
+.box-categories ul li:first-child {
+    color: red;
+}
+
+/* Seleciona o último item da lista dentro de .box-categories e deixa a cor verde */
+.box-categories ul li:last-child {
+    color: green;
+}
+
+/* Seleciona o terceiro item da lista dentro de .box-categories e deixa a cor azul */
+.box-categories ul li:nth-child(3) {
+    color: blue;
+} 
+
+/* Seleciona todos os itens pares da lista e deixa a cor vermelha */
+.box-categories ul li:nth-child(even) {
+    color: red;
+}
+
+/* Seleciona todos os itens ímpares da lista e deixa a cor azul */
+.box-categories ul li:nth-child(odd) {
+    color: blue;
+}
